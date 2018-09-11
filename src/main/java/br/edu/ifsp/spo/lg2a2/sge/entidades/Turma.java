@@ -5,10 +5,20 @@ import java.util.Collection;
 public class Turma {
 	
 	private String codigoTurma;
+	private String nomeAluno;
 	
 	public Turma(String codigoTurma) {
 		this.codigoTurma = codigoTurma;
 		
+	}
+	
+	public AlunoTurma(String nomeAluno) {
+		this.nomeAluno = nomeAluno;
+		
+	}
+	
+	public String addAluno(){
+		return nomeAluno;
 	}
 	
 	public String getTurma() {
@@ -16,7 +26,7 @@ public class Turma {
 	}
 	
 	
-	private Collection<Aluno> alunos;
+	public static Collection<Aluno> alunos;
 	public Collection<Aluno> getAlunos(){
 		return this.alunos;
 	}

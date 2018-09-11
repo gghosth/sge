@@ -24,6 +24,7 @@ public class CursosRepository {
 		return resultado;
 	}
 	
+	
 	public void adicionarCurso(Curso curso) {
 		CursosRepository.cursos.add(curso);
 	}
@@ -40,9 +41,11 @@ public class CursosRepository {
 	}
 	
 	public boolean existeAlunoNoCurso(String cpf) {
+		
 		return false;
 	}
 	
 	public void adicionarAluno(Aluno aluno) {
+		Turma.alunos.addAluno();
 	}
 }

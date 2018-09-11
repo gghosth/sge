@@ -17,4 +17,37 @@ import org.junit.Test;
 
 public class CursosRepositoryTest {
 
+	private CursosRepository repository;
+	
+	@Before
+	public void setUp() {
+		Collection<Curso> cursosMock = new ArrayList<Curso>();
+		cursosMock.add(
+				new Curso("Oceanografia"));
+		cursosMock.add(
+				new Curso("Geografia"));
+		cursosMock.add(
+				new Curso("ADS"));	
+		
+		repository = new CursosRepository();
+	}
+	
+	@Test
+	public void buscarCursoCodigo() {
+		
+		
+		String codigo = "Oceanografia";
+		
+		
+		Curso curso = repository.buscarPorCodigo(codigo);
+		
+		
+		Assert.assertNotNull(curso);
+	}
+	
+	
+	
+	
+	
+	
 }
