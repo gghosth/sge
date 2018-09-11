@@ -1,5 +1,6 @@
 package br.edu.ifsp.spo.lg2a2.sge.repositories;
 
+import br.edu.ifsp.spo.lg2a2.sge.repositories.CursosRepository;
 import br.edu.ifsp.spo.lg2a2.sge.entidades.Aluno;
 import br.edu.ifsp.spo.lg2a2.sge.entidades.Curso;
 import br.edu.ifsp.spo.lg2a2.sge.entidades.Turma;
@@ -33,19 +34,27 @@ public class CursosRepositoryTest {
 	}
 	
 	@Test
-	public void buscarCursoCodigo() {
+	public void adicionarCurso() {
 		
+		CursosRepository klebin = new CursosRepository();
+		Curso curso = new Curso("Oceano");
+		Curso result = null;
+		klebin.adicionarCurso(curso);
+		 
+		result = klebin.buscarPorCodigo("Oceano");
 		
-		String codigo = "Oceanografia";
-		
-		
-		Curso curso = repository.buscarPorCodigo(codigo);
-		
-		
-		Assert.assertNotNull(curso);
+		Assert.assertNotNull(result);
 	}
 	
-	
+	@Test
+	public void buscarCod() {
+		Curso c = null ;
+		CursosRepository ADS = new CursosRepository();
+		ADS.adicionarCurso(new Curso("ADS"));
+		c = ADS.buscarPorCodigo("ADS");
+		
+		Assert.assertNotNull(c);
+	}
 	
 	
 	

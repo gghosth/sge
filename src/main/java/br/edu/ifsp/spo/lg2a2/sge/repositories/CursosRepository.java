@@ -31,9 +31,15 @@ public class CursosRepository {
 	
 	
 	public Collection<Turma> buscarTurmas(String codigoCurso){
+		Collection<Turma> turmas = new ArrayList<>();
+		for(Curso i : cursos) {
+			if(i.getCodigo().equals(codigoCurso)) {
+				turmas.addAll(i.getTurmas());
+			}
+			
+		}
 		
-		
-		return null;
+		return turmas;
 	}
 	
 	public Collection<Aluno> buscarAlunos(String codigoCurso){
@@ -46,6 +52,8 @@ public class CursosRepository {
 	}
 	
 	public void adicionarAluno(Aluno aluno) {
-		Turma.alunos.addAluno();
+		
 	}
-}
+	
+	
+	}
