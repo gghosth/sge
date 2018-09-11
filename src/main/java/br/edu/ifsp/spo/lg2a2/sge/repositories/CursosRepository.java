@@ -47,6 +47,12 @@ public class CursosRepository {
 	}
 	
 	public boolean existeAlunoNoCurso(String cpf) {
+		Collection<Aluno> alunos = new ArrayList<>();
+		for(Curso o : cursos) {
+			if(o.)
+			
+		}
+		
 		
 		return false;
 	}
