@@ -19,5 +19,8 @@ public class ComprovanteMatricula {
 		this.aluno = aluno;
 		this.turma = turma;
 	}
+	public ComprovanteMatricula(String string, String string2) {
+		// TODO Auto-generated constructor stub
+	}
 
 }

@@ -16,6 +16,15 @@ public class Curso {
 	}
 	
 	
+	public Turma sTurma(String codTurma){
+      for(Turma turma : turmas){
+        if(turma.getTurma().equals(codTurma)){
+        return turma;}
+        }
+      
+        return null;}
+	
+	
 	
 	
 	private Collection<Turma> turmas;

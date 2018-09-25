@@ -11,6 +11,16 @@ public class CursosRepository {
 	
 	private static Collection<Curso> cursos = new ArrayList<Curso>();
 	
+	 public CursosRepository(){}
+		public Turma buscarTurma(String codigoCurso, String codigoDaTurma){
+		    for(Curso cont: cursos){
+		        if(cont.getCodigo() == codigoCurso){
+		            return cont.sTurma(codigoDaTurma);
+	            }
+	        }
+	        return null;
+		}
+	
 	
 	public Curso buscarPorCodigo(String codigo) {
 		Curso resultado = null;
@@ -49,16 +59,24 @@ public class CursosRepository {
 	public boolean existeAlunoNoCurso(String cpf) {
 		Collection<Aluno> alunos = new ArrayList<>();
 		for(Curso o : cursos) {
-			if(o.)
+			for(Aluno u : o.sTurma()) {
+				alunos.add(u);
+				
+			}
 			
 		}
 		
+		for(Aluno cont : alunos){
+		    if(cont.getCpf().equals(cpf)){
+		        return true;
+            }
+        }
 		
 		return false;
 	}
 	
 	public void adicionarAluno(Aluno aluno) {
-		
+		AlunosRepository.alunos.add(aluno);
 	}
 	
 	

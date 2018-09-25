@@ -7,7 +7,7 @@ import br.edu.ifsp.spo.lg2a2.sge.entidades.Aluno;
 
 public class AlunosRepository {
 	
-	static Collection<Aluno> alunos = new ArrayList<Aluno>();
+	public static Collection<Aluno> alunos = new ArrayList<Aluno>();
 
 	public AlunosRepository() {
 		
